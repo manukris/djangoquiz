@@ -1,4 +1,4 @@
-"""quiz URL Configuration
+"""onlinequiz URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.1/topics/http/urls/
@@ -20,6 +20,6 @@ from django.conf import settings
 from onlinequiz import views
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('', views.AddQuestion.as_view(), name='index'),
     path('admin/', admin.site.urls),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
