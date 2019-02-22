@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.urls import reverse
 # Create your models here.
 
 
@@ -12,6 +12,8 @@ class Questions(models.Model):
     rightop  = models.IntegerField()
     userid   = models.IntegerField()
 
+    def get_absolute_url(self):
+        return reverse('index')
 
 
 
