@@ -9,11 +9,25 @@ class Questions(models.Model):
     option2  = models.CharField(max_length=255)
     option3  = models.CharField(max_length=255)
     option4  = models.CharField(max_length=255)
-    rightop  = models.IntegerField()
+
+    RIGHTOPTIONS = (
+        (1, 'Option1'),
+        (2, 'Option2'),
+        (3, 'Option3'),
+        (4, 'Option4'),
+    )
+    rightop  = models.IntegerField(choices=RIGHTOPTIONS,default="")
     userid   = models.IntegerField()
+
+    def save(self, *args, **kwargs):
+        self.userid = 1
+        super().save(*args, **kwargs)  # Call the "real" save() method.
 
     def get_absolute_url(self):
         return reverse('index')
+
+
+
 
 
 
