@@ -5,4 +5,5 @@ urlpatterns = [
     path('',ListQuestion.as_view(),name = 'questionlist'),
     path('add/',AddQuestion.as_view(),name = "addquestion"),
     path('edit/<int:pk>',EditQuestions.as_view(),name = "editquestion"),
+   # path('login/',)
 ]

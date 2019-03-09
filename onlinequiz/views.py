@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.contrib.auth.models import
+from django.contrib.auth.models import User
 from django.views.generic import CreateView,ListView,UpdateView,FormView
 from .models import Questions
 from .form import LoginForm
