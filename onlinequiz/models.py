@@ -28,6 +28,17 @@ class Questions(models.Model):
 
 
 
+class Movie(models.Model):
+    Name = models.CharField(max_length=250)
+    Actor = models.CharField(max_length=250)
+    Director = models.CharField(max_length=250)
+
+
+    def get_absolute_url(self):
+        return reverse('movielist')
+
+
+
 
 
 
