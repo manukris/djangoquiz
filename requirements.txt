@@ -12,4 +12,4 @@ PyMySQL==0.9.3
 pytz==2018.9
 sqlparse==0.2.4
 whitenoise==4.1.2
-psycopg2==2.6.2
+
