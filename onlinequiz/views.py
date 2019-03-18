@@ -8,12 +8,6 @@ from .models import Movie
 # Create your views here.
 
 
-class LoginView(FormView):
-    form_class = LoginForm
-    template_name = 'auth/login.html'
-
-    # def form_valid(self, form):
-    #     auth_login(self.request, form.get_user())
 
 
 class AddQuestion(CreateView):
